@@ -4,11 +4,10 @@
 		<br>
 		<div>
 			<nav aria-label="..." style="float:right;">
-				<pagination-controls (pageChange)="p = $event"></pagination-controls>
 			</nav>
 		</div>
 
-		<div *ngFor="let physician of listPhysicians | paginate: { itemsPerPage: 10, currentPage: p }">
+		<div *ngFor="let physician of listPhysicians">
 			<div>
 				<div class="panel-heading result-div">
 					<strong><h4><b> {{physician.firstName}} &nbsp; {{physician.lastName}}&nbsp; {{physician.middleName}} </b></h4> </strong><br>
