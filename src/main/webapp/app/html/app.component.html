@@ -1,0 +1,22 @@
+<div class="home-main-div">
+	<div class="home-div">
+		<h1 class="home-h1"> Physician Compare </h1>
+	</div>
+	<div style="float:right">
+		<img src="/assets/image/img.jpg" class="image">
+	</div>
+</div>
+<nav class="navbar navbar-default nav">
+	<div class="container-fluid" style="home-nav-div">
+		<table class="table table-nav" style="color:white;">
+			<tr>
+				<td align="center" style="color:white;"><a href="#">Home</a></td>
+				<td align="center" style="color:white;"><a (click)="onClickAbout()">About</a></td>
+				<td align="center" style="color:white;"><a (click)="onClickHelp()">Help</a></td>
+			</tr>
+		</table>
+	</div>
+</nav>
+<div>
+	<router-outlet></router-outlet>
+</div>
