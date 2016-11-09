@@ -1,0 +1,163 @@
+#logo h1    {
+float: left;
+margin: 57px 0 0px 57px;
+}
+.image
+{
+height:100%; 
+width:400px;
+}
+.home-main-div{
+    height:15%;
+}
+.home-div{
+    float:left;width:35%;
+}
+.home-h1{
+padding-left:5%;margin: 60px 0 0px 57px;
+}
+.results{
+float: right;
+}
+.butt{
+ box-sizing: border-box;
+
+}
+.div-update{
+    width: 90%;
+    height: 150%;
+    float:left;
+    background-color: #bce8f1;
+    border-left: 30px;
+}
+
+.space-div{
+    height: 25%;;
+    width:25%;
+    float:left;
+   
+}
+.search {
+    border-right: 20px;
+}
+
+.results{
+float: right;
+}
+.div-results h2{
+color:#04204c;
+}
+.div-results h4{
+color:#04204c;
+}
+.butt{
+ box-sizing: border-box;
+}
+
+.div-update{
+    width: 28%;
+    height: 62%;
+    float:left;
+    background-color: #bce8f1;
+    border-left: 30px;
+}
+
+.space-div{
+    height:200px;
+    width:300px;
+    float:left;
+}
+.search {
+    border-right: 20px;
+}
+
+.div-results{
+    width:1150px;
+    background-color:#9bb8e8;
+    left: 35px;
+    text-shadow:unset;
+}
+
+.find-phy-div{
+background-color: #d9edf7; 
+width: 800px;
+}
+
+#search-div-empty{
+    float: left;
+    width:22%;
+    height:10px;
+}
+
+.search-div{
+    float: left;
+}
+
+.panel-layout{
+	width:50%;
+	background-color:powderblue;
+	float:left;
+	left: 35px;
+	
+}
+#results-h2{
+   color:#022a50;
+
+}
+
+.div-header{
+	width:80%; 
+	height: 10%;
+}
+
+.table-nav{
+align-self: center;
+width:50%;
+color: white;
+padding-left: 60%;
+cursor:pointer;
+}
+
+.table-search td{
+    width:25%;
+}
+#td{
+    width:25%;
+}
+#td-results{
+    width:65%;
+}
+#td-results td{
+   cursor:pointer;
+}
+
+.home-nav-div{
+    float:center;width:35%; 
+}
+.home-nav-div td{
+    float:center;width:35%; 
+}
+.result-div{
+    background-color:#b7d2ff;left:15%;height:auto; 
+}
+.result-div-content{
+    background-color: #317eac;left:15%;height:auto; 
+}
+.result-div-container{
+    width:50%;background-color: #bce8f1;
+}
+.help-div{
+    background-color: #317eac;left:15%;
+}
+.result-div-reset{
+    padding-right:1%;
+}
+.result-div-reset button{
+    padding-right:3%;padding-left:3%;
+}
+.search-div{
+    background-color: #317eac;left:15%;height:80%; 
+}
+#search-container{
+    width:800px;background-color: #d9edf7;
+}
