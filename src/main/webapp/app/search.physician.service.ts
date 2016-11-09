@@ -26,7 +26,7 @@ export class SerachPhysicianService {
           if (model.location == null && model.name == null) {
             return (physician.gender.toLowerCase() === model.gender) && physician.speciality.toLowerCase() === (model.speciality);
           } else if (model.location == null && model.speciality == null) {
-            return (physician.gender.toLowerCase() === model.gender) && (physician.lastName.toLowerCase().indexOf(model.name) !== -1);
+            return (physician.gender.toLowerCase() === model.gender.toLowerCase()) && (physician.lastName.toLowerCase().indexOf(model.name.toLowerCase()) !== -1);
           }
           else
             if (model.name == null && model.speciality == null) {
