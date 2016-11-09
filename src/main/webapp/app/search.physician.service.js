@@ -20,9 +20,6 @@ var SerachPhysicianService = (function () {
      * This method is to return physician list for the search inputs given in the search criteria
      */
     SerachPhysicianService.prototype.getSearchedPhysician = function (model, advanceSearch) {
-        var modelData;
-        modelData = model.location;
-        this.location = modelData;
         return this.getPhysicians().filter(function (physician) {
             if (!advanceSearch) {
                 if (model.location == null && model.name == null && model.speciality == null) {

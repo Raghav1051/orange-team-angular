@@ -19,12 +19,12 @@ export class SearchResult implements OnInit {
   private router: Router;
   private service: SerachPhysicianService;
   private route: ActivatedRoute;
-  searchInputs;
+  searchInputs:any;
   listPhysicians: any;
-  length;
+  length:any;
   profile = true;
-  location;
-  enteredLocation;
+  location:any;
+  enteredLocation:any;
 
   /**
    * Method to expand the physician profile

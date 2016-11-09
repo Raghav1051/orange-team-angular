@@ -14,10 +14,10 @@ import { SerachPhysicianService } from './search.physician.service';
 
 export class SearchComponent {
   public model = new SearchModel("", "male", "", "", "");
-  location;
+  location:string;
   advancesearch: boolean = true;
 
-  specialities: any = ["PHYSICAL THERAPY", "CHIROPRACTIC", "OCCUPATIONAL THERAPY", "CLINICAL SOCIAL WORKER", "DERMATOLOGY",
+  specialities: string[] = ["PHYSICAL THERAPY", "CHIROPRACTIC", "OCCUPATIONAL THERAPY", "CLINICAL SOCIAL WORKER", "DERMATOLOGY",
                         "PEDIATRIC EYE ASSOCIATES INC", "PODIATRY", "PERIPHERAL VASCULAR DISEASE", "PHYSICAL THERAPY",
                         "DIAGNOSTIC RADIOLOGY", "OPTOMETRY", "NUCLEAR MEDICINE"];
 
@@ -50,7 +50,7 @@ export class SearchComponent {
   /**
    * method to handle the advanced search
    */
-  public togleAdvanceSearch(event, flag: any): void {
+  public togleAdvanceSearch(event:any, flag: any): void {
     var ele = event.target || event.srcElement || event.currentTarget;
     this.advancesearch = !flag;
     if (this.advancesearch) {
