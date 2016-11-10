@@ -64,6 +64,6 @@ export class SearchComponent {
    * method to reset the search criteria
    */
   public reset(): void {
-    this.model = new SearchModel("", "male", "", "", "");
+    this.model = new SearchModel(" ", " ", "", "", "");
   }
 }

@@ -64,6 +64,7 @@
     "protractor": "4.0.9",
     "webdriver-manager": "10.2.5",
     "rimraf": "^2.5.4",
+    "ng2-pagination": "^1.0.0",
 
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.46",

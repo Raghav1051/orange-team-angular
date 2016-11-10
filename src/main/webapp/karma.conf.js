@@ -42,6 +42,9 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/jasmine-patch.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
+      //'./app/search.physician.service.spec.ts',
+     // './e2e/app.e2e-spec.ts',
+      './e2e/result.component.spec.js',
 
       // RxJs
       { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
