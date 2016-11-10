@@ -12,14 +12,11 @@ export class SerachPhysicianService {
     return PHYSICIANLIST;
   }
 
-  location;
+  location:any;
   /**
    * This method is to return physician list for the search inputs given in the search criteria
    */
-  getSearchedPhysician(model: SearchModel, advanceSearch): Physician[] {
-    var modelData: SearchModel[];
-    modelData = model.location;
-    this.location = modelData;
+  getSearchedPhysician(model: SearchModel, advanceSearch:boolean): Physician[] {
     return this.getPhysicians().filter(
       (physician) => {
         if (!advanceSearch) {
@@ -29,7 +26,7 @@ export class SerachPhysicianService {
           if (model.location == null && model.name == null) {
             return (physician.gender.toLowerCase() === model.gender) && physician.speciality.toLowerCase() === (model.speciality);
           } else if (model.location == null && model.speciality == null) {
-            return (physician.gender.toLowerCase() === model.gender) && (physician.lastName.toLowerCase().indexOf(model.name) !== -1);
+            return (physician.gender.toLowerCase() === model.gender.toLowerCase()) && (physician.lastName.toLowerCase().indexOf(model.name.toLowerCase()) !== -1);
           }
           else
             if (model.name == null && model.speciality == null) {

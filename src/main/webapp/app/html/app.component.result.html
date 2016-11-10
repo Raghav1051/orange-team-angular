@@ -3,7 +3,7 @@
 		<h2 id="results-h2" align="center">There are &nbsp;<i><b>{{length}}</b></i>&nbsp; results matching your search &nbsp; <i><b>{{enteredLocation}}</b></i> </h2>
 		<br>
 		<div>
-			<nav aria-label="..." style="float:right;">
+			<nav id="pointer"  aria-label="..." style="float:right;">
 				<pagination-controls (pageChange)="p = $event"></pagination-controls>
 			</nav>
 		</div>
@@ -13,7 +13,7 @@
 				<div class="panel-heading result-div">
 					<strong><h4><b> {{physician.firstName}} &nbsp; {{physician.lastName}}&nbsp; {{physician.middleName}} </b></h4> </strong><br>
 					<h5 (click)="physician.show = !physician.show">
-						<u><i class="td"> View Profile</i> </u>
+						<u><i id="pointer"> View Profile</i> </u>
 					</h5>
 				</div>
 			</div>

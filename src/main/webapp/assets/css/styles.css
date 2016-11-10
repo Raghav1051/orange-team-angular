@@ -4,8 +4,10 @@ margin: 57px 0 0px 57px;
 }
 .image
 {
-height:100%; 
-width:400px;
+height:20%; 
+width:50%;
+margin: 0px 0 0px 0px;
+float:right;
 }
 .home-main-div{
     height:15%;
@@ -127,7 +129,7 @@ cursor:pointer;
 #td-results{
     width:65%;
 }
-#td-results td{
+#pointer{
    cursor:pointer;
 }
 

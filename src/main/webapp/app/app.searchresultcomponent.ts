@@ -6,7 +6,6 @@ import {
 } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { SerachPhysicianService } from './search.physician.service';
-import { PaginatePipe, PaginationService } from 'ng2-pagination';
 
 /**
  * This component is for displaying the results for the search criteria
@@ -19,12 +18,12 @@ export class SearchResult implements OnInit {
   private router: Router;
   private service: SerachPhysicianService;
   private route: ActivatedRoute;
-  searchInputs;
+  searchInputs:any;
   listPhysicians: any;
-  length;
+  length:any;
   profile = true;
-  location;
-  enteredLocation;
+  location:any;
+  enteredLocation:any;
 
   /**
    * Method to expand the physician profile
@@ -51,4 +50,3 @@ export class SearchResult implements OnInit {
     });
   }
 }
-

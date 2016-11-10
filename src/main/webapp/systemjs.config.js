@@ -12,6 +12,7 @@
     map: {
       // our app is within the app folder
       app: 'app',
+
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -22,11 +23,11 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
-      
+
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-      'ng2-pagination':             'https://rawgit.com/michaelbromley/ng2-pagination/master/dist'
+         'ng2-pagination':             'https://rawgit.com/michaelbromley/ng2-pagination/master/dist'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -37,7 +38,7 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      'ng2-pagination': { main: 'ng2-pagination.js', defaultExtension: 'js' }
+         'ng2-pagination': { main: 'ng2-pagination.js', defaultExtension: 'js' }
     }
   });
 })(this);
