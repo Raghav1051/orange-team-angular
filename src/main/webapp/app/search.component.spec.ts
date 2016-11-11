@@ -1,5 +1,5 @@
 import {SearchComponent} from './app.component.search';
-import {Specialities,SearchModel}
+import {Specialities,SearchModel} from './app.component.search,ts';
 import {TestBed, async} from 'from '@angular/core/testing';
 
 describe('SearchComponent Tests', async() =>{
@@ -23,4 +23,4 @@ it('should make all fields null after reset', () =>{
 var searchModel:SearchModel = new SearchModel(null,null,null,null,null);
 expect(reset.searchModel).toBeNull();
 });
-s});
+});
