@@ -17,6 +17,45 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-jpa</artifactId>
+    <version>1.10.5.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>javax.persistence</artifactId>
+    <version>2.1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>4.3.3.RELEASE</version>
+</dependency>
     <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs -->
 <dependency>
     <groupId>org.jboss.resteasy</groupId>
@@ -28,7 +67,7 @@
     <artifactId>h2</artifactId>
     <version>1.4.193</version>
 </dependency>
-  </dependencies>
+</dependencies>
 <build>
     <finalName>PhysicianCompare</finalName>
     <plugins>
