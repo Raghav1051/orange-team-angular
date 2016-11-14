@@ -20,9 +20,7 @@ var SerachPhysicianService = (function () {
      * This method is to return physician list for the search inputs given in the search criteria
      */
     SerachPhysicianService.prototype.getSearchedPhysician = function (model, advanceSearch) {
-        var modelData;
-        modelData = model.location;
-        this.location = modelData;
+        this.location = model.location;
         return this.getPhysicians().filter(function (physician) {
             if (!advanceSearch) {
                 if (model.location == null && model.name == null && model.speciality == null) {
@@ -32,7 +30,7 @@ var SerachPhysicianService = (function () {
                     return (physician.gender.toLowerCase() === model.gender) && physician.speciality.toLowerCase() === (model.speciality);
                 }
                 else if (model.location == null && model.speciality == null) {
-                    return (physician.gender.toLowerCase() === model.gender) && (physician.lastName.toLowerCase().indexOf(model.name) !== -1);
+                    return (physician.gender.toLowerCase() === model.gender.toLowerCase()) && (physician.lastName.toLowerCase().indexOf(model.name.toLowerCase()) !== -1);
                 }
                 else if (model.name == null && model.speciality == null) {
                     return (physician.gender.toLowerCase() === model.gender) && (physician.state.toLowerCase().indexOf(model.location) !== -1 || physician.city.toLowerCase().indexOf(model.location) !== -1 || physician.zip.toLowerCase().indexOf(model.location) !== -1);
@@ -60,7 +58,7 @@ var SerachPhysicianService = (function () {
      */
     SerachPhysicianService.prototype.getEnteredLocation = function () {
         //console.log(this.location);
-        return this.location === null ? "" : this.location.toUpperCase();
+        return this.location === null || this.location === undefined ? "" : this.location.toUpperCase();
     };
     SerachPhysicianService = __decorate([
         core_1.Injectable(), 

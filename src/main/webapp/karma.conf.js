@@ -42,17 +42,12 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/jasmine-patch.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
-      //'./app/search.physician.service.spec.ts',
-     // './e2e/app.e2e-spec.ts',
-      './e2e/result.component.spec.js',
 
       // RxJs
       { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
 
       // Paths loaded via module imports:
-      {pattern: 'dist/**/*.js', included: false, watched: true},
-
       // Angular itself
       { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false },
@@ -68,6 +63,7 @@ module.exports = function(config) {
 
       // Asset (HTML & CSS) paths loaded via Angular's component compiler
       // (these paths need to be rewritten, see proxies section)
+       { pattern: appBase + '*.html', included: false, watched: true },
       { pattern: appBase + '**/*.html', included: false, watched: true },
       { pattern: appBase + '**/*.css', included: false, watched: true },
 

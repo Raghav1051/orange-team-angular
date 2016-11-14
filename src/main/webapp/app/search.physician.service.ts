@@ -17,6 +17,7 @@ export class SerachPhysicianService {
    * This method is to return physician list for the search inputs given in the search criteria
    */
   getSearchedPhysician(model: SearchModel, advanceSearch:boolean): Physician[] {
+   this.location=model.location;
     return this.getPhysicians().filter(
       (physician) => {
         if (!advanceSearch) {
@@ -56,6 +57,6 @@ export class SerachPhysicianService {
    */
   getEnteredLocation(): any {
     //console.log(this.location);
-    return this.location === null ? "" : this.location.toUpperCase();
+    return this.location === null  || this.location === undefined ? "" : this.location.toUpperCase();
   }
 }

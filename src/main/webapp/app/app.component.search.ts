@@ -8,8 +8,9 @@ import { SerachPhysicianService } from './search.physician.service';
  * This component is for searching the physicians 
  */
 @Component({
+  moduleId:module.id,
   selector: 'search',
-  templateUrl: "/app/html/app.component.search.html",
+  templateUrl: "html/app.component.search.html",
 })
 
 export class SearchComponent {
@@ -40,6 +41,7 @@ export class SearchComponent {
       this.model.name = null;
     }
     this.model.location = this.model.location === "" ? null : this.model.location.toLowerCase();
+    
     console.log(this.model.gender);
     this.model.zip = this.model.zip === "" ? null : this.model.zip.toLowerCase();
     var result = this.service.getSearchedPhysician(this.model, this.advancesearch);

@@ -33,8 +33,9 @@ var RootComponent = (function () {
     };
     RootComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "rootapp",
-            templateUrl: '/app/html/app.component.html',
+            templateUrl: 'html/app.component.html',
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], RootComponent);

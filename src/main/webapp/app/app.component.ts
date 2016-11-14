@@ -6,8 +6,9 @@ import { Router } from '@angular/router'
  */
 
 @Component({
+  moduleId: module.id,
   selector: "rootapp",
-  templateUrl: '/app/html/app.component.html',
+  templateUrl: 'html/app.component.html',
 })
 export class RootComponent {
   private router: Router;

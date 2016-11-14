@@ -61,12 +61,13 @@ var SearchComponent = (function () {
      * method to reset the search criteria
      */
     SearchComponent.prototype.reset = function () {
-        this.model = new searchmodel_1.SearchModel("", "male", "", "", "");
+        this.model = new searchmodel_1.SearchModel(" ", " ", "", "", "");
     };
     SearchComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'search',
-            templateUrl: "/app/html/app.component.search.html",
+            templateUrl: "html/app.component.search.html",
         }), 
         __metadata('design:paramtypes', [router_1.Router, search_physician_service_1.SerachPhysicianService])
     ], SearchComponent);
