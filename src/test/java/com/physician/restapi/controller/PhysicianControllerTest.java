@@ -6,10 +6,13 @@ import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
+
+import com.physician.restapi.model.Physician;
 
 public class PhysicianControllerTest {
 	private PhysicianCompareRestController test;
@@ -38,8 +41,8 @@ public class PhysicianControllerTest {
 		String specialty = null;
 		String zipCode = null;
 		String lastName = null;
-		ResponseEntity<List<Physician>> list = test.fetchAllPhysicians(location, gender, speciality, zipCode, lastName);
-		assertNotNull(list, "The list should not be null, but was.");
+		ResponseEntity<List<Physician>> list = test.fetchAllPhysicians(location, gender, specialty, zipCode, lastName);
+		Assert.assertNotNull("The list should not be null, but was.", list);
 	}
 
 }

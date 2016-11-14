@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.physician.restapi.dao.PhysicianDao;
 import com.physician.restapi.model.Physician;
 import com.physician.restapi.service.PhysicianCompareService;
 
@@ -34,7 +35,7 @@ public class PhysicianCompareRestController {
 	 */
 	
 	@RequestMapping(value = "/getPhysicians/", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<Physician>> fetchAllPhysicians(@RequestParam(name="location", required = false) String location,@RequestParam(name="gender", required = false) String gender,@RequestParam(name="speciality", required = false) String speciality, @RequestParam(name="zipCode", required = false) String zipCode,@RequestParam(lastName="lastName", required = false) String lastName) {
+	public ResponseEntity<List<Physician>> fetchAllPhysicians(@RequestParam(name="location", required = false) String location,@RequestParam(name="gender", required = false) String gender,@RequestParam(name="speciality", required = false) String speciality, @RequestParam(name="zipCode", required = false) String zipCode,@RequestParam(name="lastName", required = false) String lastName) {
 		List<Physician> physicians = physicianCompareService.findAllPhysicians(location,gender,speciality,zipCode,lastName);
 		if(physicians.isEmpty()){
 			return new ResponseEntity<List<Physician>>(HttpStatus.NO_CONTENT);

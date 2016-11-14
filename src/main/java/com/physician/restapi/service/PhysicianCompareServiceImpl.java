@@ -15,7 +15,7 @@ public class PhysicianCompareServiceImpl implements PhysicianCompareService{
 	private PhysicianDao physicianDao;
 	public List<Physician> findAllPhysicians(String location, String gender, String speciality, String zipCode,
 			String name) {
-		return physicianDao.getPhysicians(location, gender, speciality, zipCode, lastName);
+		return physicianDao.getPhysicians(location, gender, speciality, zipCode, name);
 	}
 
 
