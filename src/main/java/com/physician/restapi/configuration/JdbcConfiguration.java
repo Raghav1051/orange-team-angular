@@ -11,19 +11,27 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 public class JdbcConfiguration {
-	
+
+	/**
+	 * jdbcTempalate() method will return jdbcTemplate object
+	 * @return jdbcTempalate
+	 */
 	@Bean(name="jdbcTempalate")
 	public JdbcTemplate jdbcTempalate(){
 		return new JdbcTemplate(getDataSource());
 	}
 
+	/**
+	 * getDataSource method will return data source object
+	 * @return dataSource
+	 */
 	@Bean
 	public DataSource getDataSource() {
-	    BasicDataSource dataSource = new BasicDataSource();
-	    dataSource.setDriverClassName("org.h2.Driver");
-	    dataSource.setUrl("jdbc:h2:~/test");
-	    dataSource.setUsername("sa");
-	    dataSource.setPassword("");
-	    return dataSource;
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setDriverClassName("org.h2.Driver");
+		dataSource.setUrl("jdbc:h2:tcp://localhost/~/orange-team");
+		dataSource.setUsername("team");
+		dataSource.setPassword("orange");
+		return dataSource;
 	}
 }
