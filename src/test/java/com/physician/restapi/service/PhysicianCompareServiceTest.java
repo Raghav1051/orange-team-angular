@@ -59,7 +59,8 @@ public class PhysicianCompareServiceTest {
 		String specialty = null;
 		String zipCode = null;
 		String lastName = null;
-		List<Physician> list = test.findAllPhysicians(location, gender, specialty, zipCode, lastName);
+		Physician physician = new Physician();
+		List<Physician> list = test.fetchAllPhysicians(physician);
 		Assert.assertNotNull("The list should not be null, but was.", list);
 		Assert.assertEquals("The list should have a size of zero", 0, list.size());
 	}
