@@ -15,6 +15,7 @@ var router_1 = require('@angular/router');
  */
 var RootComponent = (function () {
     function RootComponent(router) {
+        this.title = "Physician Compare";
         this.router = router;
     }
     /**

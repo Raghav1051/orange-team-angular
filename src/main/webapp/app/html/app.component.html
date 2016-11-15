@@ -1,6 +1,6 @@
 <div class="home-main-div" style="height:18%;">
 	<div class="home-div">
-		<h1 class="home-h1"> Physician Compare </h1>
+		<h1 class="home-h1"> {{title}} </h1>
 	</div>
 	<div style="float:right" class="image">
 		<img src="/assets/image/img.jpg" class="image">
@@ -9,9 +9,9 @@
 
 		<table class="table navbar-default" id="pointer" style="color:white;">
 			<tr>
-				<td align="center" style="color:white;"><a href="#">Home</a></td>
-				<td align="center" style="color:white;"><a (click)="onClickAbout()">About</a></td>
-				<td align="center" style="color:white;"><a (click)="onClickHelp()">Help</a></td>
+				<td align="center" style="color:white;"><a  routerLink = "/home">Home</a></td>
+				<td align="center" style="color:white;"><a routerLink = "/about">About</a></td>
+				<td align="center" style="color:white;"><a routerLink = "/help">Help</a></td>
 			</tr>
 		</table>
 <div>

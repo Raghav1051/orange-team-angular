@@ -11,7 +11,8 @@ import { Router } from '@angular/router'
   templateUrl: 'html/app.component.html',
 })
 export class RootComponent {
-  private router: Router;
+   router: Router;
+   title:any = "Physician Compare"
   constructor(router: Router) {
     this.router = router;
   }
