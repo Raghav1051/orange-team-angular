@@ -6,6 +6,6 @@ import com.physician.restapi.model.Physician;
 
 public interface PhysicianCompareService {
 
-	List<Physician> findAllPhysicians(String location,String gender,String speciality,String zipCode,String lastName); 
+	public List<Physician> fetchAllPhysicians(Physician physician);
 	
 }
