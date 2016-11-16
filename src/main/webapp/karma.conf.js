@@ -15,8 +15,9 @@ module.exports = function(config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'), // click "Debug" in browser to see it
-      require('karma-htmlfile-reporter') // crashing w/ strange socket error
-    ],
+      require('karma-htmlfile-reporter'), // crashing w/ strange socket error
+      require('karma-junit-reporter')
+  ],
 
     customLaunchers: {
       // From the CLI. Not used here but interesting
@@ -83,8 +84,11 @@ module.exports = function(config) {
     exclude: [],
     preprocessors: {},
     // disabled HtmlReporter; suddenly crashing w/ strange socket error
-    reporters: ['progress', 'kjhtml'],//'html'],
-
+    reporters: ['progress', 'kjhtml', 'dots', 'junit'],//'html'],
+    singleRun: true,
+    junitReporter: {
+      outputFile: 'test-results.xml'
+    },
     // HtmlReporter configuration
     htmlReporter: {
       // Open this file to see results in browser
@@ -99,7 +103,6 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
+    browsers: ['Chrome']
   })
 }
