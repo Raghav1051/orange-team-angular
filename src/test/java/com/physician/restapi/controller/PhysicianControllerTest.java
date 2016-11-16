@@ -36,8 +36,11 @@ public class PhysicianControllerTest {
 
 	@Test
 	public void test() {
-		Physician physician = new Physician();
-		ResponseEntity<List<Physician>> list = test.fetchAllPhysicians(physician);
+		String location = "HOUSTON";
+		String gender = "M";
+		String specialty = "CHIROPRACTIC";
+		String lastName = "GERBNER";
+		List<Physician> list = test.fetchAllPhysicians(plocation, gender, specialty,lastName);
 		Assert.assertNotNull("The list should not be null, but was.", list);
 	}
 
