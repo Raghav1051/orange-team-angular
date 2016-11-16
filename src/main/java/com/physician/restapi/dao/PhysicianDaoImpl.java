@@ -35,41 +35,43 @@ public class PhysicianDaoImpl implements PhysicianDao {
 	 * @see com.physician.restapi.dao.PhysicianDao#fetchAll(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public List<Physician> fetchAll(Physician physician) {
+	public List<Physician> fetchAll(String location, String gender,String speciality,String lastName) {
 		
+		String zip=null;
 		List<String> searchList= new LinkedList<String>();
-		List<Physician> physicianList=new ArrayList<Physician>();
-		if(physician == null) {
-			return physicianList;
-		}
+		List<Physician> physicianList=null;
 		StringBuilder sb= new StringBuilder();
 		sb.append(PHYSICIANS_SQLQUERY);
 
-		if(physician.getCity()!=null && !physician.getCity().trim().isEmpty()){
-			sb.append(" and CITY=?");
-			searchList.add(physician.getCity());
+		boolean isNumeric = location.chars().allMatch( Character::isDigit );
+		if(location!=null && !location.trim().isEmpty()){
+			if(isNumeric==true){
+				zip=location;
+				sb.append(" and ZIP_CODE=?");
+				searchList.add(zip);
+				location="";
+			}
+			else if(location.length()==2){
+				sb.append(" and STATE=?");
+				searchList.add(location);
+			}else{
+				sb.append(" and CITY=?");
+				searchList.add(location);
+			}		
 		}
-		if(physician.getGender()!=null && !physician.getGender().trim().isEmpty()){
+		if(gender!=null && !gender.trim().isEmpty()){
 			sb.append(" and GENDER=?");
-			searchList.add(physician.getGender());
+			searchList.add(gender);
 		}
-		if(physician.getSpeciality()!=null && !physician.getSpeciality().trim().isEmpty()){
-			sb.append(" and SPECIALITY=?");
-			searchList.add(physician.getSpeciality());
+		if(speciality!=null && !speciality.trim().isEmpty()){
+			sb.append(" and SPECIALTY=?");
+			searchList.add(speciality);
 		}
-		if(physician.getLastName()!=null && !physician.getLastName().trim().isEmpty()){
-			sb.append(" and LASTNAME=?");
-			searchList.add(physician.getLastName());
+		if(lastName!=null && !lastName.trim().isEmpty()){
+			sb.append(" and LAST_NAME=?");
+			searchList.add(lastName);
 		}
-		if(physician.getState()!=null && !physician.getState().trim().isEmpty()){
-			sb.append(" and STATE=?");
-			searchList.add(physician.getState());
-		}
-		if(physician.getZip()!=null && !physician.getZip().trim().isEmpty()){
-			sb.append(" and ZIP=?");
-			searchList.add(physician.getZip());
-		}
-
+		
 		try{
 			physicianList=jdbcTemplate.query(sb.toString(),searchList.toArray(new String[searchList.size()]),new BeanPropertyRowMapper(Physician.class) );
 			logger.info("physician size====>"+physicianList.size());

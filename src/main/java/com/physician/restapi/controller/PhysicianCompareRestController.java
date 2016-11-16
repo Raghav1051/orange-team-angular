@@ -5,10 +5,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.physician.restapi.model.Physician;
@@ -38,22 +40,19 @@ public class PhysicianCompareRestController {
 	 * @param location
 	 * @param gender
 	 * @param speciality
-	 * @param zipCode
-	 * @param name
+	 * @param lastName
 	 * @return
 	 */
 
-	@RequestMapping(value="/getPhysicians/", method = RequestMethod.POST)
-	public ResponseEntity<List<Physician>> fetchAllPhysicians(@RequestBody Physician physician){
-		
-		logger.info(" request value=="+physician.getGender());
-		List<Physician> physicians = physicianCompareService.fetchAllPhysicians(physician);
+	@RequestMapping(value="/physicians/", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<Physician>> fetchAllPhysicians(@RequestParam(name="location", required = false) String location,@RequestParam(name="gender", required = false) String gender,@RequestParam(name="speciality", required = false) String speciality, @RequestParam(name="lastName", required = false) String lastName){
+
+		List<Physician> physicians = physicianCompareService.fetchAllPhysicians(location, gender, speciality, lastName);
 		if(physicians.isEmpty()){
 			return new ResponseEntity<List<Physician>>(HttpStatus.NO_CONTENT);
 		}else{
 			return new ResponseEntity<List<Physician>>(physicians, HttpStatus.OK);
 		}
 	}
-
 
 }
