@@ -37,13 +37,16 @@ public class PhysicianDaoTest {
 	public void testFetchAllTest_NullObject() {
 		Physician physician = null;
 		List<Physician> list = test.fetchAll(physician);
-		Assert.assertNull(list);
+		Assert.assertNotNull(list);
+		Assert.assertEquals(0, list.size());
+
 	}
 	@Test
 	public void testFetchAllTest_EmptyObject() {
 		Physician physician = new Physician();
 		List<Physician> list = test.fetchAll(physician);
-		Assert.assertNull(list);
+		Assert.assertNotNull(list);
+		Assert.assertEquals(0, list.size());
 	}
 	@Test
 	public void testFetchAllTest_City() {

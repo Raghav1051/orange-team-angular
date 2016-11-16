@@ -1,5 +1,6 @@
 package com.physician.restapi.dao;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -37,7 +38,10 @@ public class PhysicianDaoImpl implements PhysicianDao {
 	public List<Physician> fetchAll(Physician physician) {
 		
 		List<String> searchList= new LinkedList<String>();
-		List<Physician> physicianList=null;
+		List<Physician> physicianList=new ArrayList<Physician>();
+		if(physician == null) {
+			return physicianList;
+		}
 		StringBuilder sb= new StringBuilder();
 		sb.append(PHYSICIANS_SQLQUERY);
 
