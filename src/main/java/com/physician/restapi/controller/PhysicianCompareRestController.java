@@ -17,14 +17,14 @@ import com.physician.restapi.model.Physician;
 import com.physician.restapi.service.PhysicianCompareService;
 
 /**
- * This class is a RestController class and it will responsible to handle 
+ * This class is a RestController class and it will responsible to handle
  *  RestApi call and it will return the response in the Json format.
  *
  */
 
 @RestController
 public class PhysicianCompareRestController {
-	
+
 	private static final Logger logger =
 			LoggerFactory.getLogger(PhysicianCompareRestController.class);
 
@@ -46,8 +46,12 @@ public class PhysicianCompareRestController {
 
 	@RequestMapping(value="/physicians/", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Physician>> fetchAllPhysicians(@RequestParam(name="location", required = false) String location,@RequestParam(name="gender", required = false) String gender,@RequestParam(name="speciality", required = false) String speciality, @RequestParam(name="lastName", required = false) String lastName){
-
-		List<Physician> physicians = physicianCompareService.fetchAllPhysicians(location, gender, speciality, lastName);
+		Physician physician = new Physician();
+		physician.setLocation(location);
+		physician.setGender(gender);
+		physician.setSpeciality(speciality);
+		physician.setLastName(lastName);
+		List<Physician> physicians = physicianCompareService.fetchAllPhysicians(physician);
 		if(physicians.isEmpty()){
 			return new ResponseEntity<List<Physician>>(HttpStatus.NO_CONTENT);
 		}else{
