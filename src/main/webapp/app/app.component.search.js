@@ -17,11 +17,12 @@ var search_physician_service_1 = require('./search.physician.service');
  */
 var SearchComponent = (function () {
     function SearchComponent(router, service) {
-        this.model = new searchmodel_1.SearchModel("", "male", "", "");
+        this.model = new searchmodel_1.SearchModel("", "male", "", "", "");
         this.advancesearch = true;
         this.specialities = ["PHYSICAL THERAPY", "CHIROPRACTIC", "OCCUPATIONAL THERAPY", "CLINICAL SOCIAL WORKER", "DERMATOLOGY",
             "PEDIATRIC EYE ASSOCIATES INC", "PODIATRY", "PERIPHERAL VASCULAR DISEASE", "PHYSICAL THERAPY",
             "DIAGNOSTIC RADIOLOGY", "OPTOMETRY", "NUCLEAR MEDICINE"];
+        this.searchName = "Advance Search";
         this.router = router;
         this.service = service;
     }
@@ -47,21 +48,20 @@ var SearchComponent = (function () {
     /**
      * method to handle the advanced search
      */
-    SearchComponent.prototype.togleAdvanceSearch = function (event, flag) {
-        var ele = event.target || event.srcElement || event.currentTarget;
-        this.advancesearch = !flag;
+    SearchComponent.prototype.togleAdvanceSearch = function () {
+        this.advancesearch = !this.advancesearch;
         if (this.advancesearch) {
-            ele.innerHTML = "Advance Search";
+            this.searchName = "Advance Search";
         }
         else {
-            ele.innerHTML = "Show less Search";
+            this.searchName = "Show less Search";
         }
     };
     /**
      * method to reset the search criteria
      */
     SearchComponent.prototype.reset = function () {
-        this.model = new searchmodel_1.SearchModel("", "", "", "", "");
+        this.model = new searchmodel_1.SearchModel(" ", " ", "", "", "");
     };
     SearchComponent = __decorate([
         core_1.Component({

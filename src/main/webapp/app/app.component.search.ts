@@ -5,7 +5,7 @@ import { Physician } from "./physician";
 import { SerachPhysicianService } from './search.physician.service';
 
 /**
- * This component is for searching the physicians
+ * This component is for searching the physicians 
  */
 @Component({
   moduleId:module.id,
@@ -16,14 +16,15 @@ import { SerachPhysicianService } from './search.physician.service';
 export class SearchComponent {
   public model = new SearchModel("", "male", "", "", "");
   location:string;
-  advancesearch: boolean = true;
+  public advancesearch: boolean = true;
 
   specialities: string[] = ["PHYSICAL THERAPY", "CHIROPRACTIC", "OCCUPATIONAL THERAPY", "CLINICAL SOCIAL WORKER", "DERMATOLOGY",
                         "PEDIATRIC EYE ASSOCIATES INC", "PODIATRY", "PERIPHERAL VASCULAR DISEASE", "PHYSICAL THERAPY",
                         "DIAGNOSTIC RADIOLOGY", "OPTOMETRY", "NUCLEAR MEDICINE"];
 
-  private router: Router;
-  private service: SerachPhysicianService;
+  public router: Router;
+  public service: SerachPhysicianService;
+  public searchName = "Advance Search" ;
   constructor(router: Router, service: SerachPhysicianService) {
     this.router = router;
     this.service = service;
@@ -41,7 +42,7 @@ export class SearchComponent {
       this.model.name = null;
     }
     this.model.location = this.model.location === "" ? null : this.model.location.toLowerCase();
-
+    
     console.log(this.model.gender);
     this.model.zip = this.model.zip === "" ? null : this.model.zip.toLowerCase();
     var result = this.service.getSearchedPhysician(this.model, this.advancesearch);
@@ -52,13 +53,12 @@ export class SearchComponent {
   /**
    * method to handle the advanced search
    */
-  public togleAdvanceSearch(event:any, flag: any): void {
-    var ele = event.target || event.srcElement || event.currentTarget;
-    this.advancesearch = !flag;
+  public togleAdvanceSearch(): void {
+    this.advancesearch = !this.advancesearch;
     if (this.advancesearch) {
-      ele.innerHTML = "Advance Search";
+      this.searchName = "Advance Search";
     } else {
-      ele.innerHTML = "Show less Search"
+      this.searchName = "Show less Search"
     }
   }
 
@@ -66,6 +66,6 @@ export class SearchComponent {
    * method to reset the search criteria
    */
   public reset(): void {
-    this.model = new SearchModel("", "", "", "", "");
+    this.model = new SearchModel(" ", " ", "", "", "");
   }
 }
