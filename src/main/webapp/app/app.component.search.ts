@@ -5,7 +5,7 @@ import { Physician } from "./physician";
 import { SerachPhysicianService } from './search.physician.service';
 
 /**
- * This component is for searching the physicians 
+ * This component is for searching the physicians
  */
 @Component({
   moduleId:module.id,
@@ -41,7 +41,7 @@ export class SearchComponent {
       this.model.name = null;
     }
     this.model.location = this.model.location === "" ? null : this.model.location.toLowerCase();
-    
+
     console.log(this.model.gender);
     this.model.zip = this.model.zip === "" ? null : this.model.zip.toLowerCase();
     var result = this.service.getSearchedPhysician(this.model, this.advancesearch);
@@ -66,6 +66,6 @@ export class SearchComponent {
    * method to reset the search criteria
    */
   public reset(): void {
-    this.model = new SearchModel(" ", " ", "", "", "");
+    this.model = new SearchModel("", "", "", "", "");
   }
 }

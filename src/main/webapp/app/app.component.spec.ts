@@ -64,9 +64,19 @@ describe('RootComponent in app.component', () => {
     expect(component).not.toBeNull();
   });
 
-  it('can get Router Links from template', () => {
+  it('can get Router Links from template home.html', () => {
     expect(links.length).toBe(3, 'should have 3 links');
     expect(links[0].linkParams).toBe('/home', 'first link should go to Home');
+  });
+
+  it('can get Router Links from template about.html', () => {
+    expect(links.length).toBe(3, 'should have 3 links');
+    expect(links[1].linkParams).toBe('/about', 'first link should go to Home');
+  });
+
+  it('can get Router Links from template help.html', () => {
+    expect(links.length).toBe(3, 'should have 3 links');
+    expect(links[2].linkParams).toBe('/help', 'first link should go to Home');
   });
 
   it('can click About link in template', () => {

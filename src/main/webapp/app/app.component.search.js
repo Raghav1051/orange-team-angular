@@ -17,7 +17,7 @@ var search_physician_service_1 = require('./search.physician.service');
  */
 var SearchComponent = (function () {
     function SearchComponent(router, service) {
-        this.model = new searchmodel_1.SearchModel("", "male", "", "", "");
+        this.model = new searchmodel_1.SearchModel("", "male", "", "");
         this.advancesearch = true;
         this.specialities = ["PHYSICAL THERAPY", "CHIROPRACTIC", "OCCUPATIONAL THERAPY", "CLINICAL SOCIAL WORKER", "DERMATOLOGY",
             "PEDIATRIC EYE ASSOCIATES INC", "PODIATRY", "PERIPHERAL VASCULAR DISEASE", "PHYSICAL THERAPY",
@@ -61,7 +61,7 @@ var SearchComponent = (function () {
      * method to reset the search criteria
      */
     SearchComponent.prototype.reset = function () {
-        this.model = new searchmodel_1.SearchModel(" ", " ", "", "", "");
+        this.model = new searchmodel_1.SearchModel("", "", "", "", "");
     };
     SearchComponent = __decorate([
         core_1.Component({

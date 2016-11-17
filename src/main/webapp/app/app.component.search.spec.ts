@@ -12,6 +12,8 @@ import { NO_ERRORS_SCHEMA }          from '@angular/core';
 import { Component, Compiler}    from '@angular/core';
 import { Router, RouterLinkWithHref, RouterLink, RouterLinkActive, RouterOutlet  } from '@angular/router'
 import { SerachPhysicianService } from './search.physician.service';
+import {SearchModel} from './searchmodel';
+
 
 ////////  SPECS  /////////////
 export class routerStub{
@@ -22,7 +24,11 @@ describe('SearchComponent ', function () {
   let de: DebugElement;
   let comp: SearchComponent;
   let fixture: ComponentFixture<SearchComponent>;
- 
+  let toggle : togleAdvanceSearch;
+  let ele;
+
+
+
   beforeEach(async(() => {
    TestBed.configureTestingModule({
        imports:[ FormsModule],
@@ -42,22 +48,30 @@ describe('SearchComponent ', function () {
   // beforeEach(() => {
   //   fixture = TestBed.createComponent(AppComponent);
   //   comp = fixture.componentInstance;
-   
+
   // });
 
-  it('should create SearchComponent', () => expect(comp).toBeDefined() );
-it(' specialities length should be 12', () => {
-//console.log(comp.specialities.length);
-expect(comp.specialities.length).toEqual(12)
-}
-);
- it('should create model', () => expect(comp.model).toBeDefined() );
- it('gender should be male', () => expect(comp.model.gender).toEqual("male"));
- 
+it('should create SearchComponent', () => {expect(comp).toBeDefined()});
+it(' specialities length should be 12', () => {expect(comp.specialities.length).toEqual(12)});
+it('should create model', () => expect(comp.model).toBeDefined() );
+it('gender should be male', () => expect(comp.model.gender).toEqual("male"));
+// it('toggle to advanced search', ()=> {
+//   var spy = spyOn(ele, 'togleAdvanceSearch');
+//       ele.togleAdvanceSearch;
+//        expect(spy).toHaveBeenCalled()});
+// it("onSubmit() function", ()=> {
+//   let model = new SearchModel("","","","","");
+//                spyOn(model, "getPhysicianSearch");
+//                model.toString();
+//                expect(model.getPhysicianSearch).toHaveBeenCalled()
+//            });
+//it('it should reset all the values to null', () =>{ expect(reset().model)toEqual("","","","","")});
+
+});
+
   // it('should have expected <h1> text', () => {
   //   fixture.detectChanges();
   //   const h1 = de.nativeElement;
   //   expect(h1.innerText).toMatch(/angular/i,
   //     '<h1> should say something about "Angular"');
   // });
-});
