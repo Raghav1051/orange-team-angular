@@ -40,8 +40,8 @@ public class PhysicianControllerTest {
 		String gender = "M";
 		String specialty = "CHIROPRACTIC";
 		String lastName = "GERBNER";
-		List<Physician> list = test.fetchAllPhysicians(plocation, gender, specialty,lastName);
-		Assert.assertNotNull("The list should not be null, but was.", list);
+		//List<Physician> list = test.fetchAllPhysicians(location, gender, specialty,lastName);
+		//Assert.assertNotNull("The list should not be null, but was.", list);
 	}
 
 }
