@@ -21,67 +21,63 @@ import com.physician.restapi.model.Physician;
  * @Repository annotation is used for to store data.
  *
  */
-@Repository(value="physicianDao")
+@Repository(value = "physicianDao")
 public class PhysicianDaoImpl implements PhysicianDao {
-	
-	private static final Logger logger =
-			LoggerFactory.getLogger(PhysicianDaoImpl.class);
+
+	private static final Logger logger = LoggerFactory.getLogger(PhysicianDaoImpl.class);
 
 	@Autowired
-	@Qualifier(value="jdbcTempalate")
+	@Qualifier(value = "jdbcTempalate")
 	private JdbcTemplate jdbcTemplate;
 
 	/**
-	 * @see com.physician.restapi.dao.PhysicianDao#fetchAll(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @see com.physician.restapi.dao.PhysicianDao#fetchAll(java.lang.String,
+	 *      java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public List<Physician> fetchAll(String location, String gender,String speciality,String lastName) {
-		
-		String zip=null;
-		List<String> searchList= new LinkedList<String>();
-		List<Physician> physicianList=null;
-		StringBuilder sb= new StringBuilder();
+	public List<Physician> fetchAll(Physician physician) {
+
+		String zip = null;
+		List<String> searchList = new LinkedList<String>();
+		List<Physician> physicianList = null;
+		StringBuilder sb = new StringBuilder();
 		sb.append(PHYSICIANS_SQLQUERY);
 
-		boolean isNumeric = location.chars().allMatch( Character::isDigit );
-		if(location!=null && !location.trim().isEmpty()){
-			if(isNumeric==true){
-				zip=location;
-				sb.append(" and ZIP_CODE=?");
-				searchList.add(zip);
-				location="";
-			}
-			else if(location.length()==2){
-				sb.append(" and STATE=?");
-				searchList.add(location);
-			}else{
-				sb.append(" and CITY=?");
-				searchList.add(location);
-			}		
+		if (physician.getZip() != null && !physician.getZip().isEmpty()) {
+			sb.append(" and ZIP_CODE=?");
+			searchList.add(physician.getZip());
 		}
-		if(gender!=null && !gender.trim().isEmpty()){
+		if (physician.getState() != null && !physician.getState().isEmpty()) {
+			sb.append(" and STATE=?");
+			searchList.add(physician.getState());
+		}
+		if (physician.getCity() != null && !physician.getCity().isEmpty()) {
+			sb.append(" and CITY=?");
+			searchList.add(physician.getCity());
+		}
+		if (physician.getGender() != null && !physician.getGender().trim().isEmpty()) {
 			sb.append(" and GENDER=?");
-			searchList.add(gender);
+			searchList.add(physician.getGender());
 		}
-		if(speciality!=null && !speciality.trim().isEmpty()){
+		if (physician.getSpeciality() != null && !physician.getSpeciality().trim().isEmpty()) {
 			sb.append(" and SPECIALTY=?");
-			searchList.add(speciality);
+			searchList.add(physician.getSpeciality());
 		}
-		if(lastName!=null && !lastName.trim().isEmpty()){
+		if (physician.getLastName() != null && !physician.getLastName().trim().isEmpty()) {
 			sb.append(" and LAST_NAME=?");
-			searchList.add(lastName);
+			searchList.add(physician.getLastName());
 		}
-		
-		try{
-			physicianList=jdbcTemplate.query(sb.toString(),searchList.toArray(new String[searchList.size()]),new BeanPropertyRowMapper(Physician.class) );
-			logger.info("physician size====>"+physicianList.size());
-			
-		}catch(DataAccessException de){
+
+		try {
+			physicianList = jdbcTemplate.query(sb.toString(), searchList.toArray(new String[searchList.size()]),
+					new BeanPropertyRowMapper(Physician.class));
+			logger.info("physician size====>" + physicianList.size());
+
+		} catch (DataAccessException de) {
 			logger.error(de.getMessage());
-		}catch(Exception e){
+		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
 		return physicianList;
 	}
 }
-

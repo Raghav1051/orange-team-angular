@@ -30,13 +30,13 @@ public class PhysicianCompareServiceImpl implements PhysicianCompareService{
 	 * @return list of Physicians.
 	 */
 
-	public List<Physician> fetchAllPhysicians(String location, String gender,String speciality,String lastName){
+	public List<Physician> fetchAllPhysicians(Physician physician){
 		List<Physician> physicians=null;
 		if(physicianDao == null) {
 			physicianDao = new PhysicianDaoImpl();
 		}
 		try{
-			physicians= physicianDao.fetchAll(location , gender, speciality,lastName);
+			physicians= physicianDao.fetchAll(physician);
 		}catch(Exception ex){
 			ex.printStackTrace();
 			logger.error(ex.getMessage());

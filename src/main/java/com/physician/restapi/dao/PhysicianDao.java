@@ -7,5 +7,5 @@ import com.physician.restapi.model.Physician;
 
 public interface PhysicianDao extends ApplicationConstants {
 
-	public List<Physician> fetchAll(String location, String gender,String speciality,String lastName);
+	public List<Physician> fetchAll(Physician physician);
 }
