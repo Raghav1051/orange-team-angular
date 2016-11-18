@@ -50,6 +50,7 @@ public class PhysicianServiceClientTest {
 			e.printStackTrace();
 		}
 
+		assertNotNull(httpResponse);
 		System.out.println("GET Response Status:: "
 				+ httpResponse.getStatusLine().getStatusCode());
 
