@@ -40,6 +40,9 @@ public class PhysicianDaoImpl implements PhysicianDao {
 		String zip = null;
 		List<String> searchList = new LinkedList<String>();
 		List<Physician> physicianList = null;
+		if(physician == null) {
+			return physicianList;
+		}
 		StringBuilder sb = new StringBuilder();
 		sb.append(PHYSICIANS_SQLQUERY);
 
