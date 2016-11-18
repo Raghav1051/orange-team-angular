@@ -37,7 +37,6 @@ public class PhysicianServiceClientTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
 	public void test() {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet(GET_URL);
