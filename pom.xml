@@ -124,7 +124,10 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>${jdk.version}</source>
+<fork>true</fork>
+      <meminitial>1024m</meminitial>
+      <maxmem>2024m</maxmem>
+      					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
