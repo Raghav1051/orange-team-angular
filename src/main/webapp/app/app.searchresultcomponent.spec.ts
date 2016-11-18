@@ -176,6 +176,7 @@ describe('SearchResult in app.searchresultcomponent', () => {
     }
 
 
+
     //  let viewProfiles:any = allDebugElements[0];
     //         fixture.detectChanges();
     //         click(viewProfiles);
@@ -201,7 +202,7 @@ describe('SearchResult in app.searchresultcomponent', () => {
 
 
 
-  it('should navigate to Home with fields emptied', fakeAsync(() => {
+  it('should navigate to Home with fields emptied, reset()', fakeAsync(() => {
     let component1: SearchComponent;
     let fixture1: ComponentFixture<SearchComponent>;
     let router: Router;
@@ -209,29 +210,7 @@ describe('SearchResult in app.searchresultcomponent', () => {
     fixture1 = TestBed.createComponent(SearchComponent);
     component1 = fixture1.componentInstance;
     fixture1.detectChanges();
-    // const injector = fixture1.debugElement.injector;
-    // location = injector.get(Location);
-    // router = injector.get(Router);
-    // router.setUpLocationChangeListener();
-    // router.initialNavigation();
-    // spyOn(injector.get(TwainService), 'getQuote')
-    //   .and.returnValue(Promise.resolve('Test Quote')); // fakes it
 
-    // advance();
-    // page = new Page();
-
-
-
-    // location.go('/home');
-    // tick();
-    // fixture.detectChanges();
-    // expectPathToBe('/home');
-    // expectElementOf(SearchComponent);
-    //
-    // page.expectEvents([
-    //   [r.NavigationStart, '/home'], [r.RoutesRecognized, '/home'],
-    //   [r.NavigationEnd, '/home']
-    // ]);
   }));
 
 });
