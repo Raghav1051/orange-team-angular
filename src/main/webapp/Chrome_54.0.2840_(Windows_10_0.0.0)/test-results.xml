@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 54.0.2840 (Windows 10 0.0.0)" package="" timestamp="2016-11-18T02:47:29" id="0" hostname="IndraA" tests="26" errors="0" failures="6" time="18.557">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"/>
+  </properties>
+  <testcase name="SearchComponent  should create SearchComponent" time="0.247" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent   specialities length should be 12" time="0.136" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  should create service" time="0.114" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  should create model" time="0.093" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  gender should be male" time="0.074" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  button should be 3" time="0.085" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  should getPhysicians from the service" time="0.069" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  Advance search should be toggle" time="0.089" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  reset button click" time="0.081" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  Search button click with gender male and without any location" time="0.586" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  Search button click with gender female and without any location" time="1" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent ">
+    <failure type="">Expected 57 to equal 8, 'search result for only female without loaction'.
+</failure>
+  </testcase>
+  <testcase name="SearchComponent  Search button click with location" time="1.008" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchComponent "/>
+  <testcase name="RootComponent in app.component should create RootComponent object" time="0.979" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component should create Router object in RootComponent" time="0.999" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component should display Physician Compare title" time="1.002" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component component should not be null" time="0.999" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can get Router Links from template home.html" time="1" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can get Router Links from template about.html" time="1.001" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can get Router Links from template help.html" time="1.997" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can click About link in template" time="0.999" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can click Help link in template" time="1.002" classname="Chrome_54_0_2840_(Windows_10_0_0_0).RootComponent in app.component"/>
+  <testcase name="SearchResult in app.searchresultcomponent should create SearchResult component" time="0.998" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchResult in app.searchresultcomponent">
+    <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
+Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
+</failure>
+    <failure type="">Expected undefined to be defined.
+</failure>
+  </testcase>
+  <testcase name="SearchResult in app.searchresultcomponent should create Router object in SearchResult" time="1" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchResult in app.searchresultcomponent">
+    <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
+Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
+</failure>
+    <failure type="">TypeError: Cannot read property 'router' of undefined
+</failure>
+  </testcase>
+  <testcase name="SearchResult in app.searchresultcomponent should create SerachPhysicianService object in SearchResult" time="0.998" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchResult in app.searchresultcomponent">
+    <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
+Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
+</failure>
+    <failure type="">TypeError: Cannot read property 'service' of undefined
+</failure>
+  </testcase>
+  <testcase name="SearchResult in app.searchresultcomponent component should not be null" time="1" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchResult in app.searchresultcomponent">
+    <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
+Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
+</failure>
+  </testcase>
+  <testcase name="SearchResult in app.searchresultcomponent objects should not be null" time="1.001" classname="Chrome_54_0_2840_(Windows_10_0_0_0).SearchResult in app.searchresultcomponent">
+    <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
+Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
+</failure>
+    <failure type="">TypeError: Cannot read property 'router' of undefined
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'Warning: System.import could not load the optional "systemjs.config.extras.js". Did you omit it by accident? Continuing without it.'
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: Error{originalErr: Error{}}
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'Advance Search'
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: SerachPhysicianService{}
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: SerachPhysicianService{}
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'male'
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'male'
+,Chrome 54.0.2840 (Windows 10 0.0.0) LOG: 'male'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

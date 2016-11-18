@@ -15,9 +15,9 @@ import { SerachPhysicianService } from './search.physician.service';
 })
 
 export class SearchResult implements OnInit {
-  private router: Router;
-  private service: SerachPhysicianService;
-  private route: ActivatedRoute;
+  public router: Router;
+  public service: SerachPhysicianService;
+  public route: ActivatedRoute;
   searchInputs:any;
   listPhysicians: any;
   length:any;
