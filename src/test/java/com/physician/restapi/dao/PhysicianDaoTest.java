@@ -33,7 +33,7 @@ public class PhysicianDaoTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void testFetchAllTest_NullObject() {
 		Physician physician = null;
 		List<Physician> list = test.fetchAll(physician);
@@ -41,14 +41,14 @@ public class PhysicianDaoTest {
 		//Assert.assertEquals(0, list.size());
 
 	}
-	@Test
+	//@Test
 	public void testFetchAllTest_EmptyObject() {
 		Physician physician = new Physician();
 		List<Physician> list = test.fetchAll(physician);
 		//Assert.assertNotNull(list);
 		//Assert.assertEquals(0, list.size());
 	}
-	@Test
+	//@Test
 	public void testFetchAllTest_City() {
 		Physician physician = new Physician();
 		physician.setCity("Nashville");
@@ -56,7 +56,7 @@ public class PhysicianDaoTest {
 		//Assert.assertNotNull(list);
 		//Assert.assertNotEquals(0, list.size());
 	}
-	@Test
+	//@Test
 	public void testFetchAllTest_CityGender() {
 		Physician physician = new Physician();
 		physician.setCity("Nashville");
