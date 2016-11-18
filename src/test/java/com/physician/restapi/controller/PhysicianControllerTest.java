@@ -1,7 +1,6 @@
 package com.physician.restapi.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
@@ -18,7 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 import com.physician.restapi.configuration.PhysicianSpringMvcRestApiConfiguration;
 
 /**
- * 
+ *
  * @author RoopaP
  *
  */
@@ -26,11 +25,11 @@ import com.physician.restapi.configuration.PhysicianSpringMvcRestApiConfiguratio
 @ContextConfiguration(classes = PhysicianSpringMvcRestApiConfiguration.class)
 @WebAppConfiguration
 public class PhysicianControllerTest {
-	
+
 	@Autowired
     private WebApplicationContext webApplicationContext;
     private MockMvc mockMvc;
-    
+
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
