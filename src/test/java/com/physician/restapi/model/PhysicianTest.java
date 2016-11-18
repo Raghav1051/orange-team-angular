@@ -29,21 +29,21 @@ public class PhysicianTest {
 
 	@Test
 	public void testSetLocation_City() {
-		String testObj = "Nashville";
+		String testObj = "Alpine";
 		test.setLocation(testObj);
-		//assertNotNull(test.getCity());
-		//assertEquals(testObj, test.getCity());
+		assertNotNull(test.getCity());
+		assertEquals(testObj, test.getCity());
 	}
 
 	@Test
 	public void testSetLocation_CityStateZip() {
-		String testObj = "TN Nashville 34543";
+		String testObj = "TX Alpine 79830";
 		test.setLocation(testObj);
-		//assertNotNull(test.getCity());
-		//assertNotNull(test.getZip());
-		//assertNotNull(test.getState());
-		//assertEquals("Nashville", test.getCity());
-		//assertEquals("TN", test.getState());
-		//assertEquals("34543", test.getZip());
+		assertNotNull(test.getCity());
+		assertNotNull(test.getZip());
+		assertNotNull(test.getState());
+		assertEquals("Alpine", test.getCity());
+		assertEquals("TX", test.getState());
+		assertEquals("79830", test.getZip());
 	}
 }

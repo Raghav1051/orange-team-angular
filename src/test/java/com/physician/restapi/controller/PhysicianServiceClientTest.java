@@ -2,6 +2,7 @@ package com.physician.restapi.controller;
 
 import static org.junit.Assert.*;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,24 +20,15 @@ import org.junit.Test;
 public class PhysicianServiceClientTest {
 	private static final String USER_AGENT = "Mozilla/5.0";
 
-	private static final String GET_URL = "http://localhost:9090/getPhysicians";
+	private static final String GET_URL = "http://localhost:8080/PhysicianCompare/";
+	
+	/**
+	 * 
+	 * @author RoopaP
+	 *
+	 */
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
+	@Test
 	public void test() {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet(GET_URL);
@@ -48,9 +40,7 @@ public class PhysicianServiceClientTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return;
-		/*
-		assertNotNull(httpResponse);
+
 		System.out.println("GET Response Status:: "
 				+ httpResponse.getStatusLine().getStatusCode());
 
@@ -89,7 +79,6 @@ public class PhysicianServiceClientTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		*/
 	}
 
 }

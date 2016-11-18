@@ -1,63 +1,41 @@
-/**
- * 
- */
 package com.physician.restapi.service;
-
-import static org.junit.Assert.*;
 
 import java.util.List;
 
-import org.junit.After;
-import org.junit.AfterClass;
+
+
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.physician.restapi.configuration.PhysicianSpringMvcRestApiConfiguration;
 import com.physician.restapi.model.Physician;
-
 /**
- * @author JamesB
+ * 
+ * @author RoopaP
  *
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = PhysicianSpringMvcRestApiConfiguration.class)
+@WebAppConfiguration
 public class PhysicianCompareServiceTest {
-	private PhysicianCompareService test;
 	
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-		test = new PhysicianCompareServiceImpl();
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@After
-	public void tearDown() throws Exception {
-	}
-
+	@Autowired
+	private PhysicianCompareService physicianCompareService;
+	
 	@Test
-	public void testFindAllPhysicians_AllNull() {
-		Physician physician = new Physician();
-		List<Physician> list = test.fetchAllPhysicians(physician);
-		//assertNotNull("The list should not be null, but was.", list);
-		//assertEquals("The list should have a size of zero", 0, list.size());
+	public void testFetchAllPhysicians() {
+		Physician physician = new  Physician();
+		physician.setGender("F");
+		List<Physician> physicians = physicianCompareService.fetchAllPhysicians(physician);
+		Assert.assertNotNull(physicians);
+		Assert.assertTrue(!physicians.isEmpty());
+		//Assert.assertEquals(physicians.size(), 82);
+		//Assert.assertEquals(physicians.get(0).getFirstName(), "DARRON");
 	}
 
 }
