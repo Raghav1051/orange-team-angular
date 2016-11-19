@@ -1,47 +1,47 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome 54.0.2840 (Windows 7 0.0.0)" package="" timestamp="2016-11-18T17:44:02" id="0" hostname="RaghavendraH" tests="29" errors="0" failures="9" time="2.457">
+<testsuite name="Chrome 54.0.2840 (Windows 7 0.0.0)" package="" timestamp="2016-11-19T16:41:01" id="0" hostname="RaghavendraH" tests="29" errors="0" failures="9" time="2.566">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36"/>
   </properties>
-  <testcase name="SearchComponent  should create SearchComponent" time="0.298" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent   specialities length should be 12" time="0.165" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  should create service" time="0.153" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  should create SearchComponent" time="0.389" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent   specialities length should be 12" time="0.19" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  should create service" time="0.15" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
   <testcase name="SearchComponent  should create model" time="0.101" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  gender should be male" time="0.106" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  button should be 3" time="0.104" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  should getPhysicians from the service" time="0.087" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  Advance search should be toggle" time="0.099" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  reset button click" time="0.089" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  Search button click with gender male and without any location" time="0.083" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="SearchComponent  Search button click with gender female and without any location" time="0.133" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent ">
+  <testcase name="SearchComponent  gender should be male" time="0.085" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  button should be 3" time="0.106" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  should getPhysicians from the service" time="0.09" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  Advance search should be toggle" time="0.092" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  reset button click" time="0.093" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  Search button click with gender male and without any location" time="0.09" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="SearchComponent  Search button click with gender female and without any location" time="0.119" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent ">
     <failure type="">Expected 57 to equal 8, 'search result for only female without loaction'.
 </failure>
   </testcase>
-  <testcase name="SearchComponent  Search button click with location" time="0.079" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
-  <testcase name="RootComponent in app.component should create RootComponent object" time="0.052" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component should create Router object in RootComponent" time="0.064" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component should display Physician Compare title" time="0.066" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component component should not be null" time="0.038" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component can get Router Links from template home.html" time="0.051" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component can get Router Links from template about.html" time="0.057" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="SearchComponent  Search button click with location" time="0.077" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchComponent "/>
+  <testcase name="RootComponent in app.component should create RootComponent object" time="0.053" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component should create Router object in RootComponent" time="0.055" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component should display Physician Compare title" time="0.038" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component component should not be null" time="0.037" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can get Router Links from template home.html" time="0.038" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can get Router Links from template about.html" time="0.043" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
   <testcase name="RootComponent in app.component can get Router Links from template help.html" time="0.046" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component can click About link in template" time="0.042" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="RootComponent in app.component can click Help link in template" time="0.043" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
-  <testcase name="SearchResult in app.searchresultcomponent should create SearchResult component" time="0.09" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="RootComponent in app.component can click About link in template" time="0.043" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="RootComponent in app.component can click Help link in template" time="0.055" classname="Chrome_54_0_2840_(Windows_7_0_0_0).RootComponent in app.component"/>
+  <testcase name="SearchResult in app.searchresultcomponent should create SearchResult component" time="0.142" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
     <failure type="">Expected undefined to be defined.
 </failure>
   </testcase>
-  <testcase name="SearchResult in app.searchresultcomponent should create Router object in SearchResult" time="0.042" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="SearchResult in app.searchresultcomponent should create Router object in SearchResult" time="0.051" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
     <failure type="">TypeError: Cannot read property 'router' of undefined
 </failure>
   </testcase>
-  <testcase name="SearchResult in app.searchresultcomponent should create SerachPhysicianService object in SearchResult" time="0.064" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="SearchResult in app.searchresultcomponent should create SerachPhysicianService object in SearchResult" time="0.073" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
@@ -53,28 +53,28 @@ Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
   </testcase>
-  <testcase name="SearchResult in app.searchresultcomponent objects should not be null" time="0.067" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="SearchResult in app.searchresultcomponent objects should not be null" time="0.068" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
     <failure type="">TypeError: Cannot read property 'router' of undefined
 </failure>
   </testcase>
-  <testcase name="SearchResult in app.searchresultcomponent need to see at most 10 physicians in a page. (Pagination Testing)" time="0.045" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="SearchResult in app.searchresultcomponent need to see at most 10 physicians in a page. (Pagination Testing)" time="0.053" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
     <failure type="">TypeError: Cannot read property 'debugElement' of undefined
 </failure>
   </testcase>
-  <testcase name="SearchResult in app.searchresultcomponent view Profile testing (Clickable Action)" time="0.07" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="SearchResult in app.searchresultcomponent view Profile testing (Clickable Action)" time="0.072" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>
     <failure type="">TypeError: Cannot read property 'debugElement' of undefined
 </failure>
   </testcase>
-  <testcase name="SearchResult in app.searchresultcomponent should navigate to Home with fields emptied, reset()" time="0.075" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
+  <testcase name="SearchResult in app.searchresultcomponent should navigate to Home with fields emptied, reset()" time="0.069" classname="Chrome_54_0_2840_(Windows_7_0_0_0).SearchResult in app.searchresultcomponent">
     <failure type="">Failed: Uncaught (in promise): Failed to load app/html/app.component.result.html
 Error: Uncaught (in promise): Failed to load app/html/app.component.result.html
 </failure>

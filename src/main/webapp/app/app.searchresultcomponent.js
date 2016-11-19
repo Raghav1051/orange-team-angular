@@ -41,7 +41,8 @@ var SearchResult = (function () {
     };
     SearchResult = __decorate([
         core_1.Component({
-            templateUrl: './app/html/app.component.result.html',
+            moduleId: module.id,
+            templateUrl: 'html/app.component.result.html'
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, search_physician_service_1.SerachPhysicianService])
     ], SearchResult);

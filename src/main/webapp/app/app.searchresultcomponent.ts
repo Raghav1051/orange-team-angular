@@ -11,7 +11,8 @@ import { SerachPhysicianService } from './search.physician.service';
  * This component is for displaying the results for the search criteria
  */
 @Component({
-  templateUrl: './app/html/app.component.result.html',
+  moduleId: module.id,
+  templateUrl: 'html/app.component.result.html'
 })
 
 export class SearchResult implements OnInit {
